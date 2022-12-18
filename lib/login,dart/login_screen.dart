@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_1/component.dart/login_component.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,8 +16,14 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Column(children: [
         SizedBox(height: 200,),
+       MyTextField(hintText: "Enter Your Email", textInputType: TextInputType.emailAddress, obscureText: false),
+       SizedBox(height: 20,),
+       MyTextField(hintText: "Enter Your Password", textInputType: TextInputType.visiblePassword, obscureText: true),
+       SizedBox(height: 50,),
        
+
       ]),
+      
     );
   }
 }
