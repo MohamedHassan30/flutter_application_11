@@ -14,6 +14,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
+        SizedBox(height: 200,),
         TextFormField(
           keyboardType: TextInputType.emailAddress,
           obscureText: false,
