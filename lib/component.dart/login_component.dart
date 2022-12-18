@@ -2,15 +2,17 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MyTextField extends StatelessWidget {
-  const MyTextField({super.key});
-
+  const MyTextField({super.key,required this.hintText,required this.textInputType, required this.obscureText} );
+final TextInputType textInputType;
+final String hintText;
+final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return  TextFormField(
-          keyboardType: TextInputType.emailAddress,
-          obscureText: false,
+          keyboardType: textInputType,
+          obscureText: obscureText,
           decoration: InputDecoration(
-          hintText: 'Enter Your Email',
+          hintText: hintText,
           enabledBorder: OutlineInputBorder(borderSide: 
           Divider.createBorderSide(context),
           ),
