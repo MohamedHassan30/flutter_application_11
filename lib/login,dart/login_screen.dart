@@ -17,7 +17,10 @@ class _LoginScreenState extends State<LoginScreen> {
         TextFormField(decoration: InputDecoration(
           hintText: 'Enter Your Email',
           enabledBorder: OutlineInputBorder(borderRadius: 
-          Divider.createBorderSide(context)
+          Divider.createBorderSide(context),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.black)
           ),
           
         ),)
