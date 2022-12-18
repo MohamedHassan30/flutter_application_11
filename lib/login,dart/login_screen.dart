@@ -15,20 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Column(children: [
         SizedBox(height: 200,),
-        TextFormField(
-          keyboardType: TextInputType.emailAddress,
-          obscureText: false,
-          decoration: InputDecoration(
-          hintText: 'Enter Your Email',
-          enabledBorder: OutlineInputBorder(borderSide: 
-          Divider.createBorderSide(context),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.black)
-          ),
-          contentPadding: EdgeInsets.all(8),
-          filled: true,
-        ),)
+       
       ]),
     );
   }
