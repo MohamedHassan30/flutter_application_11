@@ -14,15 +14,18 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(children: [
-        TextFormField(decoration: InputDecoration(
+        TextFormField(
+          keyboardType: TextInputType.emailAddress,
+          decoration: InputDecoration(
           hintText: 'Enter Your Email',
-          enabledBorder: OutlineInputBorder(borderRadius: 
+          enabledBorder: OutlineInputBorder(borderSide: 
           Divider.createBorderSide(context),
           ),
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Colors.black)
           ),
           contentPadding: EdgeInsets.all(8),
+          filled: true,
         ),)
       ]),
     );
