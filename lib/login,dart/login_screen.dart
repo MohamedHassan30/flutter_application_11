@@ -15,9 +15,9 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Column(children: [
         TextFormField(decoration: InputDecoration(
-          border: OutlineInputBorder(
-            
-          )
+          hintText: 'Enter Your Email',
+          
+          
         ),)
       ]),
     );
