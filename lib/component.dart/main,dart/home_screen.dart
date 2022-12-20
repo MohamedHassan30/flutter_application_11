@@ -22,9 +22,11 @@ return Scaffold(
   itemCount: 4,
   itemBuilder: (context, index) {
     return GridTile(
-      child: Container(),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(55),
+        child: Image(image: NetworkImage("https://alamphoto.com/wp-content/uploads/2017/11/Love-Bouquet-flowers-623x779.jpg"))),
       );
-  },    
+  },     
   ),
  drawer: Drawer(
   child: Column(
