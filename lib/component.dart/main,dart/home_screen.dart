@@ -17,7 +17,9 @@ return Scaffold(
     backgroundColor: Colors.green,
     title: Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
     actions: [
-      Row(children: [],),
+      Row(children: [
+        Icon(Icon(Icons.add_shopping_cart))
+      ],),
     ],),
     
 );
