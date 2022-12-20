@@ -18,9 +18,18 @@ return Scaffold(
     title: Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
     actions: [
       Row(children: [
-        IconButton(onPressed: (){
+        Stack(
+          children: [
+
           
-        }, icon: Icon(Icons.add_shopping_cart)),
+          IconButton(onPressed: (){
+            
+          }, icon: Icon(Icons.add_shopping_cart)),
+        ]),
+        Padding(
+          padding: const EdgeInsets.only(right: 11),
+          child: Text("\$ 13",style: TextStyle(fontSize: 18),),
+        )
       ],),
     ],),
     
