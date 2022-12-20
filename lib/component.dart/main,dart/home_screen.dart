@@ -20,8 +20,7 @@ return Scaffold(
       Row(children: [
         Stack(
           children: [
-
-          
+            Container(),
           IconButton(onPressed: (){
             
           }, icon: Icon(Icons.add_shopping_cart)),
