@@ -20,7 +20,9 @@ class _LoginScreenState extends State<LoginScreen> {
        SizedBox(height: 20,),
        MyTextField(hintText: "Enter Your Password", textInputType: TextInputType.visiblePassword, obscureText: true),
        SizedBox(height: 50,),
-       ElevatedButton(onPressed: (){}, child: Text("Sign Up")),
+       ElevatedButton(onPressed: (){}, child: Text("Sign Up",
+       style: TextStyle(fontSize: 18),
+       )),
 
       ]),
       
