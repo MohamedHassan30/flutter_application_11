@@ -13,12 +13,27 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 return Scaffold(
-  drawer: Drawer(
-    child: Column(children: [
+ drawer: Drawer(
+  child: Column(
+    children: [
       UserAccountsDrawerHeader(
-      
-    ]),
+        decoration: BoxDecoration(
+          image: DecorationImage(image: 
+          NetworkImage
+          ('https://yt3.ggpht.com/OCuYBblHNQ4ofmiEsGVlzZ8RHvPiG1-yvrtmN3ItS4kKPglGzLtzz9Jg3P55kLPH7zkJ3FAOLP4=s900-c-k-c0x00ffffff-no-rj',),
+          fit: BoxFit.cover
+        )
+        ),
+        currentAccountPicture: CircleAvatar(
+          radius: 20,
+          backgroundImage: NetworkImage('https://s3.us-east-2.amazonaws.com/files.fisher.osu.edu/leadreadtoday/public/styles/image_src/public/2021-03/newnormal_2.jpg?VersionId=WAXs8j2FGuU91EDXt4P1HkBSmm4zB9Xx'),
+        ),
+        accountName: Text('Mando'),
+         accountEmail: Text('Mando303@gmail.com'),
+         )
+    ],
   ),
+ ),
   appBar: AppBar(
     backgroundColor: Colors.green,
     title: Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
