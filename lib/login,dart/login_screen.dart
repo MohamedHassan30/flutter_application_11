@@ -14,9 +14,11 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [
+      body: Padding(
+        padding: EdgeInsets.all(10),
+        child :Column(children: [
         SizedBox(height: 200,),
-       MyTextField(hintText: "Enter Your Email", textInputType: TextInputType.emailAddress, obscureText: false),
+        MyTextField(hintText: "Enter Your Email", textInputType: TextInputType.emailAddress, obscureText: false),
        SizedBox(height: 20,),
        MyTextField(hintText: "Enter Your Password", textInputType: TextInputType.visiblePassword, obscureText: true),
        SizedBox(height: 50,),
@@ -34,6 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
        
 
       ]),
+      ),
       
     );
   }
