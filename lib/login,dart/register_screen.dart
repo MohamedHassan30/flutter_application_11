@@ -19,7 +19,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
       child: Column(
         children: [
           SizedBox(height: 200,),
-          MyTextField(hintText: 'Enter your UserName', textInputType: TextInputType.name, obscureText: false),
+          MyTextField(hintText: 'Enter your Username', textInputType: TextInputType.name, obscureText: false),
           SizedBox(
             height: 20,
           ),
@@ -32,7 +32,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           SizedBox(
             height: 50,
           ),
-          ElevatedButton(onPressed: (){}, child:  Text('Sin up',style: TextStyle(
+          ElevatedButton(onPressed: (){}, child:  Text('Sign up',style: TextStyle(
             fontSize: 15
           ),
           

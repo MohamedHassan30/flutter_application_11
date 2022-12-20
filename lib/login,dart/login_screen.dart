@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/component.dart/login_component.dart';
+import 'package:flutter_application_1/component.dart/main,dart/home_screen.dart';
 import 'package:flutter_application_1/login,dart/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -23,7 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
        SizedBox(height: 20,),
        MyTextField(hintText: "Enter Your Password", textInputType: TextInputType.visiblePassword, obscureText: true),
        SizedBox(height: 50,),
-       ElevatedButton(onPressed: (){}, child: Text("Sign in",
+       ElevatedButton(onPressed: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=> HomeScreen()));
+       }, child: Text("Sign in",
        style: TextStyle(fontSize: 18),
        
        ),
