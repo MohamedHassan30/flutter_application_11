@@ -21,6 +21,7 @@ final bool obscureText;
           ),
           contentPadding: EdgeInsets.all(8),
           filled: true,
-        ),)
+          )
+    );
   }
 }
