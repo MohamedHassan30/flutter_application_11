@@ -14,7 +14,10 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 return Scaffold(
   drawer: Drawer(
-    child: Column(children: []),
+    child: Column(children: [
+      UserAccountsDrawerHeader(
+      
+    ]),
   ),
   appBar: AppBar(
     backgroundColor: Colors.green,
