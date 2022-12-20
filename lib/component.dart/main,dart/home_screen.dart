@@ -20,7 +20,16 @@ return Scaffold(
       Row(children: [
         Stack(
           children: [
-            Container(),
+            Container(
+              height: 20,
+              width: 20,
+              child: Text("8",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),
+              padding: EdgeInsets.only(left: 5),
+              decoration: BoxDecoration(
+              
+                color: Color.fromARGB(211, 164, 255, 193),
+               shape:BoxShape.circle ),
+            ),
           IconButton(onPressed: (){
             
           }, icon: Icon(Icons.add_shopping_cart)),
