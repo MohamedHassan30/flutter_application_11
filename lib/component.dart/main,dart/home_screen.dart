@@ -31,7 +31,10 @@ return Scaffold(
         accountName: Text('Mando'),
          accountEmail: Text('Mando303@gmail.com'),
          ),
-         ListTile(title: Text("Home"),leading: Icon(Icons.home),onTap: (){},)
+         ListTile(title: Text("Home"),leading: Icon(Icons.home),onTap: (){},),
+         ListTile(title: Text("My Products"), leading: Icon(Icons.add_shopping_cart),onTap: (){},),
+         ListTile(title:Text("About") ,leading: Icon(Icons.help_center),onTap:(){} ,),
+         ListTile(title: Text("Logout"),leading: Icon(Icons.exit_to_app),onTap: (){},)
     ],  
   ),
  ),
