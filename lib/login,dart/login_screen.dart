@@ -36,7 +36,7 @@ class _LoginScreenState extends State<LoginScreen> {
        SizedBox(height: 30,),
        Row(
         children: [
-          
+          Text("Do not have any account",style: TextStyle(fontSize: 13),),
         ],
        ),
 
