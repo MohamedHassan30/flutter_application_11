@@ -33,7 +33,12 @@ class _LoginScreenState extends State<LoginScreen> {
         ),),
         padding: MaterialStateProperty.all(EdgeInsets.all(8),),
        ),),
-       
+       SizedBox(height: 30,),
+       Row(
+        children: [
+          
+        ],
+       ),
 
       ]),
       ),
