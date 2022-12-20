@@ -43,7 +43,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
-            
+          
             ),
           ),
           ),
