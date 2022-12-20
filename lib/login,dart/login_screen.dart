@@ -22,7 +22,11 @@ class _LoginScreenState extends State<LoginScreen> {
        SizedBox(height: 50,),
        ElevatedButton(onPressed: (){}, child: Text("Sign Up",
        style: TextStyle(fontSize: 18),
-       )),
+       
+       ),
+       style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(Colors.green,),
+       ),),
 
       ]),
       
