@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_application_1/component.dart/login_component.dart';
+import 'package:flutter_application_1/login,dart/login_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -32,7 +33,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
           SizedBox(
             height: 50,
           ),
-          ElevatedButton(onPressed: (){}, child:  Text('Sign up',style: TextStyle(
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+          }, child:  Text('Sign up',style: TextStyle(
             fontSize: 15
           ),
           
