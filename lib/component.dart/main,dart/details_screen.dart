@@ -70,8 +70,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
     
    body: Column(children: [
     Container(
-      child: Image(image: AssetImage("image/37.jpg")),
+      child: Image(image: AssetImage("images/37.jpg")),
+      
     ),
+    
    ],),
     );
   }}
