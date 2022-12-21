@@ -15,34 +15,10 @@ class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-  child: Column(
-    children: [
-      UserAccountsDrawerHeader(
-        decoration: BoxDecoration(
-          image: DecorationImage(image: 
-          AssetImage
-          ('images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg'),
-          fit: BoxFit.cover
-        )
-        ),
-        currentAccountPicture: CircleAvatar(
-          radius: 20,
-          backgroundImage: AssetImage('images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg'),
-        ),
-        accountName: Text('Mando'),
-         accountEmail: Text('Mando303@gmail.com'),
-         ),
-         ListTile(title: Text("Home"),leading: Icon(Icons.home),onTap: (){},),
-         ListTile(title: Text("My Products"), leading: Icon(Icons.add_shopping_cart),onTap: (){},),
-         ListTile(title:Text("About") ,leading: Icon(Icons.help_center),onTap:(){} ,),
-         ListTile(title: Text("Logout"),leading: Icon(Icons.exit_to_app),onTap: (){},)
-    ],  
-  ),
- ),
+      
   appBar: AppBar(
     backgroundColor: Colors.green,
-    title: Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
+    title: Text("Details Screen",style: TextStyle(color: Colors.black,fontSize: 15),),
     actions: [
       Row(children: [
         Stack(
@@ -78,6 +54,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
      Padding(
        padding: const EdgeInsets.all(10.0),
        child: Row(
+
          children: [
            Container(
             decoration: BoxDecoration(
@@ -92,15 +69,20 @@ Icon(Icons.star,color: Colors.yellow,),
 Icon(Icons.star,color: Colors.yellow,),      
 Icon(Icons.star,color: Colors.yellow,),
 Icon(Icons.star,color: Colors.yellow,),  
+SizedBox(
+  width: 20,
+),
 Row(
   children: [
     Icon(Icons.edit_location), 
-    Text('Flower Shop') 
+    Text('Flower Shop') ,
   ],
 ),
          ],
        ),
      ),
+     Text('Details :'),
+     Text('A Flower sometimes is known as bloom or blossom and it is a good thing in nature')
    ],),
     );
   }}
