@@ -87,6 +87,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
             ),
             child: Text('New'), 
            ),
+          Icon(Icons.star),
          ],
        ),
      ),
