@@ -74,11 +74,21 @@ class _DetailsScreenState extends State<DetailsScreen> {
       
     ),
     SizedBox(height: 7,),
-     Text('\$ 12.67'),
-     Container(
-      decoration: BoxDecoration(
-        
-      ),
+     Text('\$ 13.99'),
+     Padding(
+       padding: const EdgeInsets.all(10.0),
+       child: Row(
+         children: [
+           Container(
+            decoration: BoxDecoration(
+              
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.red,
+            ),
+            child: Text('New'),
+           ),
+         ],
+       ),
      ),
    ],),
     );
