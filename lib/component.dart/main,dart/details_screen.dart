@@ -73,7 +73,13 @@ class _DetailsScreenState extends State<DetailsScreen> {
       child: Image(image: AssetImage("images/37.jpg")),
       
     ),
-     
+    SizedBox(height: 7,),
+     Text('\$ 12.67'),
+     Container(
+      decoration: BoxDecoration(
+        
+      ),
+     ),
    ],),
     );
   }}
