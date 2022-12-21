@@ -25,6 +25,9 @@ return Scaffold(
     itemBuilder: (context, index) {
       
       return Stack(children: [GridTile(
+        footer: GridTileBar(trailing: IconButton(onPressed: () { },
+        color: Color.fromARGB(255,62,94,70),
+        icon: Icon(Icons.add),),),
           child: Positioned(
             top: -3,
             bottom: -9,
@@ -36,11 +39,14 @@ return Scaffold(
                 borderRadius: BorderRadius.circular(55),
                 child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
             ),
+            
           ),
           ),],
        
       );
-    },      
+    },
+    
+      
     ),
   ),
  drawer: Drawer(
