@@ -70,7 +70,7 @@ Icon(Icons.star,color: Colors.yellow,),
 Icon(Icons.star,color: Colors.yellow,),
 Icon(Icons.star,color: Colors.yellow,),  
 SizedBox(
-  width: 20,
+  width: 70,
 ),
 Row(
   children: [
@@ -81,8 +81,16 @@ Row(
          ],
        ),
      ),
-     Text('Details :'),
-     Text('A Flower sometimes is known as bloom or blossom and it is a good thing in nature')
+     Padding(
+       padding: const EdgeInsets.all(10),
+       child: Align(
+  alignment: Alignment.topLeft,
+        child: Text('Details :')),
+     ),
+     Padding(
+       padding: const EdgeInsets.all(10.0),
+       child: Text('A Flower sometimes is known as bloom or blossom and it is a good thing in nature', style: TextStyle(fontSize: 15),),
+     )
    ],),
     );
   }}
