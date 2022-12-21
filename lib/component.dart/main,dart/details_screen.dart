@@ -82,7 +82,7 @@ Row(
        ),
      ),
      Padding(
-       padding: const EdgeInsets.all(10),  
+       padding: const EdgeInsets.all(10),   
        child: Align(
   alignment: Alignment.topLeft,
         child: Text('Details :')),
