@@ -21,11 +21,14 @@ return Scaffold(
   ),
   itemCount: 4,
   itemBuilder: (context, index) {
-    return GridTile(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(55),
-        child: Image(image: NetworkImage("https://alamphoto.com/wp-content/uploads/2017/11/Love-Bouquet-flowers-623x779.jpg"))),
-      );
+    
+    return Stack(children: [GridTile(
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(55),
+          child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+        ),],
+     
+    );
   },      
   ),
  drawer: Drawer(
@@ -34,14 +37,14 @@ return Scaffold(
       UserAccountsDrawerHeader(
         decoration: BoxDecoration(
           image: DecorationImage(image: 
-          NetworkImage
-          ('https://yt3.ggpht.com/OCuYBblHNQ4ofmiEsGVlzZ8RHvPiG1-yvrtmN3ItS4kKPglGzLtzz9Jg3P55kLPH7zkJ3FAOLP4=s900-c-k-c0x00ffffff-no-rj',),
+          AssetImage
+          ('images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg'),
           fit: BoxFit.cover
         )
         ),
         currentAccountPicture: CircleAvatar(
           radius: 20,
-          backgroundImage: NetworkImage('https://s3.us-east-2.amazonaws.com/files.fisher.osu.edu/leadreadtoday/public/styles/image_src/public/2021-03/newnormal_2.jpg?VersionId=WAXs8j2FGuU91EDXt4P1HkBSmm4zB9Xx'),
+          backgroundImage: AssetImage('images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg'),
         ),
         accountName: Text('Mando'),
          accountEmail: Text('Mando303@gmail.com'),
