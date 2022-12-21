@@ -23,9 +23,13 @@ return Scaffold(
   itemBuilder: (context, index) {
     
     return Stack(children: [GridTile(
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(55),
-          child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+        child: Positioned(
+          top: -3,
+          bottom: -9,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(55),
+            child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+        ),
         ),],
      
     );
