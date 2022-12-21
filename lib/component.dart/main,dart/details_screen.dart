@@ -1,59 +1,21 @@
 import 'package:flutter/cupertino.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter_application_1/component.dart/main,dart/details_screen.dart';
+import 'package:flutter/cupertino.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+import 'package:flutter/material.dart';
+
+class DetailsScreen extends StatefulWidget {
+  const DetailsScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<DetailsScreen> createState() => _DetailsScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
-return Scaffold(
-  body: Padding(
-    padding: const EdgeInsets.only(top: 10),
-    child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 2,
-      childAspectRatio: 3/2,
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 33,
-    ),
-    itemCount: 8,
-    itemBuilder: (context, index) {
-      
-      return Stack(children: [GridTile(
-        footer: GridTileBar(trailing: IconButton(onPressed: () { },
-        color: Color.fromARGB(255,62,94,70),
-        icon: Icon(Icons.add,color: Colors.white,),
-         ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),  
-        ),
-        
-          child: Positioned(
-            top: -3,
-            bottom: -9,
-            child: GestureDetector(
-              onTap: (() {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),);
-              }),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(55),
-                child: Image(image: AssetImage("images/37.jpg"),fit: BoxFit.cover,)),
-            ),
-            
-          ),
-          ),],
-       
-      );
-    },
-    
-      
-    ),
-  ),
- drawer: Drawer(
+    return Scaffold(
+      drawer: Drawer(
   child: Column(
     children: [
       UserAccountsDrawerHeader(
@@ -106,6 +68,10 @@ return Scaffold(
       ],),
     ],),
     
-);
-  }
-  }
+   body: Column(children: [
+    Container(
+      child: Image(image: AssetImage("image/37.jpg")),
+    ),
+   ],),
+    );
+  }}
