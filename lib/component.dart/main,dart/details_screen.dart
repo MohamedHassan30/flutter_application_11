@@ -74,7 +74,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       
     ),
     SizedBox(height: 7,),
-     Text('\$ 13.99'),
+     Text('\$ 13.99'), 
      Padding(
        padding: const EdgeInsets.all(10.0),
        child: Row(
