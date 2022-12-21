@@ -73,7 +73,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
       child: Image(image: AssetImage("images/37.jpg")),
       
     ),
-    
+     
    ],),
     );
   }}
