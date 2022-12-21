@@ -27,7 +27,9 @@ return Scaffold(
       return Stack(children: [GridTile(
         footer: GridTileBar(trailing: IconButton(onPressed: () { },
         color: Color.fromARGB(255,62,94,70),
-        icon: Icon(Icons.add),),),
+        icon: Icon(Icons.add),
+        ),leading: Text("\$ 13.99"),),
+        
           child: Positioned(
             top: -3,
             bottom: -9,
