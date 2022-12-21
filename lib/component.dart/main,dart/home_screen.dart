@@ -27,9 +27,9 @@ return Scaffold(
       return Stack(children: [GridTile(
         footer: GridTileBar(trailing: IconButton(onPressed: () { },
         color: Color.fromARGB(255,62,94,70),
-        icon: Icon(Icons.add),
-         ),leading: Text("\$ 13.99"),
-         title: Text(""),),
+        icon: Icon(Icons.add,color: Colors.white,),
+         ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),
+        ),
         
           child: Positioned(
             top: -3,
@@ -40,7 +40,7 @@ return Scaffold(
               }),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(55),
-                child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+                child: Image(image: AssetImage("images/37.jpg"),fit: BoxFit.cover,)),
             ),
             
           ),
