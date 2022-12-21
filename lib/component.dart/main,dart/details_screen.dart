@@ -95,7 +95,7 @@ Icon(Icons.star,color: Colors.yellow,),
 Row(
   children: [
     Icon(Icons.edit_location), 
-    Text('Flower Shop')
+    Text('Flower Shop') 
   ],
 ),
          ],
