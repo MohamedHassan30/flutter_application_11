@@ -28,7 +28,7 @@ return Scaffold(
         footer: GridTileBar(trailing: IconButton(onPressed: () { },
         color: Color.fromARGB(255,62,94,70),
         icon: Icon(Icons.add,color: Colors.white,),
-         ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),
+         ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),), 
         ),
         
           child: Positioned(
