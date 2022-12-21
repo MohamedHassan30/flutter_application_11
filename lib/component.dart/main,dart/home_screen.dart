@@ -25,28 +25,31 @@ return Scaffold(
     itemCount: 8,
     itemBuilder: (context, index) {
       
-      return Stack(children: [GridTile(
-        footer: GridTileBar(trailing: IconButton(onPressed: () { },
-        color: Color.fromARGB(255,62,94,70),
-        icon: Icon(Icons.add,color: Colors.white,),
-         ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),  
-        ),
-        
-          child: Positioned(
-            top: -3,
-            bottom: -9,
-            child: GestureDetector(
-              onTap: (() {
-               Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),);
-              }),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(55),
-                child: Image(image: AssetImage("images/37.jpg"),fit: BoxFit.cover,)),
-            ),
-            
+      return GestureDetector(
+        onTap:(){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),);
+
+        } ,
+        child: Stack(children: [GridTile(
+          footer: GridTileBar(trailing: IconButton(onPressed: () { },
+          color: Color.fromARGB(255,62,94,70),
+          icon: Icon(Icons.add,color: Colors.white,),
+           ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),  
           ),
-          ),],
-       
+          
+            child: Positioned(
+              top: -3,
+              bottom: -9,
+              
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(55),
+                  child: Image(image: AssetImage("images/37.jpg"),fit: BoxFit.cover,)),
+              ),
+              
+            ),
+            ],
+         
+        ),
       );
     },
     
