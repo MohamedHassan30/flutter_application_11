@@ -13,32 +13,35 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
 return Scaffold(
-  body: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-    crossAxisCount: 2,
-    childAspectRatio: 3/2,
-    crossAxisSpacing: 10,
-    mainAxisSpacing: 33,
-  ),
-  itemCount: 4,
-  itemBuilder: (context, index) {
-    
-    return Stack(children: [GridTile(
-        child: Positioned(
-          top: -3,
-          bottom: -9,
-          child: GestureDetector(
-            onTap: (() {
-              
-            }),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(55),
-              child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+  body: Padding(
+    padding: const EdgeInsets.only(top: 10),
+    child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 2,
+      childAspectRatio: 3/2,
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 33,
+    ),
+    itemCount: 4,
+    itemBuilder: (context, index) {
+      
+      return Stack(children: [GridTile(
+          child: Positioned(
+            top: -3,
+            bottom: -9,
+            child: GestureDetector(
+              onTap: (() {
+                
+              }),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(55),
+                child: Image(image: AssetImage("images/WhatsApp Image 2021-10-17 at 5.17.50 PM (3).jpeg"))),
+            ),
           ),
-        ),
-        ),],
-     
-    );
-  },      
+          ),],
+       
+      );
+    },      
+    ),
   ),
  drawer: Drawer(
   child: Column(
