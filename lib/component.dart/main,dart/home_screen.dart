@@ -17,36 +17,36 @@ class Item{
 class _HomeScreenState extends State<HomeScreen> {
   List<Item> item=[
     Item(
-      imagePath: 'image/37.jpg',
-      Price: 13.99
+      imagePath: 'images/37.jpg',
+      Price: 17.99
     ),
     Item(
-      imagePath: 'image/38.jpg', 
+      imagePath: 'images/38.jpg', 
+      Price: 10.99
+    ),
+Item(
+      imagePath: 'images/39.jpg',
+      Price: 19.99
+    ),
+Item(
+      imagePath: 'images/40.jpg',
+      Price: 14.99
+    ),
+Item(
+      imagePath: 'images/41.jpg',
+      Price: 16.99
+    ),
+Item(
+      imagePath: 'images/42.jpg',
+      Price: 19.99
+    ),
+Item(
+      imagePath: 'images/43.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: 'image/39.jpg',
-      Price: 13.99
-    ),
-Item(
-      imagePath: 'image/40.jpg',
-      Price: 13.99
-    ),
-Item(
-      imagePath: 'image/41.jpg',
-      Price: 13.99
-    ),
-Item(
-      imagePath: 'image/42.jpg',
-      Price: 13.99
-    ),
-Item(
-      imagePath: 'image/43.jpg',
-      Price: 13.99
-    ),
-Item(
-      imagePath: 'image/44.jpg',
-      Price: 13.99
+      imagePath: 'images/44.jpg',
+      Price: 11.99
     ),
 
 
@@ -74,7 +74,7 @@ return Scaffold(
           footer: GridTileBar(trailing: IconButton(onPressed: () { },
           color: Color.fromARGB(255,62,94,70),
           icon: Icon(Icons.add,color: Colors.white,),
-           ),leading: Text("\$ 13.99",style: TextStyle(color: Colors.white),),  
+           ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
           ),
           
             child: Positioned(
