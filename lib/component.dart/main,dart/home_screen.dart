@@ -17,7 +17,7 @@ class Item{
 class _HomeScreenState extends State<HomeScreen> {
   List<Item> item=[
     Item(
-      imagePath: '',
+      imagePath: 'image/37.jpg',
       Price: 13.99
     ),
     Item(
