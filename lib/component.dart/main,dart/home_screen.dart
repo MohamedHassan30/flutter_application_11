@@ -62,7 +62,7 @@ return Scaffold(
       crossAxisSpacing: 10,
       mainAxisSpacing: 33,
     ),
-    itemCount: 8,
+    itemCount: item.length,
     itemBuilder: (context, index) {
       
       return GestureDetector(
