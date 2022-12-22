@@ -40,7 +40,23 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         )
       ],),
     ],),
-   body: ListTile(
+   body: Column(
+     children: [
+       ListTile(
+        subtitle: Text("Test"),
+        title: Text("Test"),
+        leading: CircleAvatar(
+          backgroundImage: AssetImage("images/37.jpg"),
+         
+          
+        ),
+        trailing:IconButton(onPressed: () {
+            
+          },
+          icon: Icon(Icons.remove), 
+          ),
+       ),
+       ListTile(
     subtitle: Text("Test"),
     title: Text("Test"),
     leading: CircleAvatar(
@@ -53,6 +69,70 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       },
       icon: Icon(Icons.remove), 
       ),
+   ), 
+
+ListTile(
+    subtitle: Text("Test"),
+    title: Text("Test"),
+    leading: CircleAvatar(
+      backgroundImage: AssetImage("images/37.jpg"),
+     
+      
+    ),
+    trailing:IconButton(onPressed: () {
+        
+      },
+      icon: Icon(Icons.remove), 
+      ),
+   ), 
+
+ListTile(
+    subtitle: Text("Test"),
+    title: Text("Test"),
+    leading: CircleAvatar(
+      backgroundImage: AssetImage("images/37.jpg"),
+     
+      
+    ),
+    trailing:IconButton(onPressed: () {
+        
+      },
+      icon: Icon(Icons.remove), 
+      ),
+   ), 
+
+ListTile(
+    subtitle: Text("Test"),
+    title: Text("Test"),
+    leading: CircleAvatar(
+      backgroundImage: AssetImage("images/37.jpg"),
+     
+      
+    ),
+    trailing:IconButton(onPressed: () {
+        
+      },
+      icon: Icon(Icons.remove), 
+      ),
+   ), 
+
+ListTile(
+    subtitle: Text("Test"),
+    title: Text("Test"),
+    leading: CircleAvatar(
+      backgroundImage: AssetImage("images/37.jpg"),
+     
+      
+    ),
+    trailing:IconButton(onPressed: () {
+        
+      },
+      icon: Icon(Icons.remove), 
+      ),
+   ), 
+
+
+     ],
    ), 
 
 
