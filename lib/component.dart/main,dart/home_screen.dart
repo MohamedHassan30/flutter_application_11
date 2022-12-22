@@ -15,6 +15,7 @@ class Item{
   Item({required this.imagePath , required this.Price});    
 }
 class _HomeScreenState extends State<HomeScreen> {
+  List<Item> item=[];
   @override
   Widget build(BuildContext context) {
 return Scaffold(
