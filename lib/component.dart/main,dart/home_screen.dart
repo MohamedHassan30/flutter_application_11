@@ -68,7 +68,7 @@ return Scaffold(
         
         return GestureDetector(
           onTap:(){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),); 
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(product: item[index],),),); 
     
           } ,
           child: Stack(children: [GridTile(
