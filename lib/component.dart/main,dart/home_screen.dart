@@ -56,46 +56,48 @@ Item(
 return Scaffold(
   body: Padding(
     padding: const EdgeInsets.only(top: 10),
-    child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      crossAxisCount: 2,
-      childAspectRatio: 3/2,
-      crossAxisSpacing: 10,
-      mainAxisSpacing: 33,
-    ),
-    itemCount: item.length,
-    itemBuilder: (context, index) { 
-      
-      return GestureDetector(
-        onTap:(){
-        Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),); 
-
-        } ,
-        child: Stack(children: [GridTile(
-          footer: GridTileBar(trailing: IconButton(onPressed: () { },
-          color: Color.fromARGB(255,62,94,70),
-          icon: Icon(Icons.add,color: Colors.white,),
-           ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
-          ),
-          
-            child: Positioned(
-              top: -3,
-              bottom: -9, 
-              left: 0,
-              right: 0,
-               
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(55),
-                  child: Image(image: AssetImage(item[index].imagePath),fit: BoxFit.cover,)),
-              ),
-              
-            ),
-            ],
-         
-        ),
-      );
-    },
+    child: SingleChildScrollView(
+      child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 3/2,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 33,
+      ),
+      itemCount: item.length,
+      itemBuilder: (context, index) { 
+        
+        return GestureDetector(
+          onTap:(){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(),),); 
     
+          } ,
+          child: Stack(children: [GridTile(
+            footer: GridTileBar(trailing: IconButton(onPressed: () { },
+            color: Color.fromARGB(255,62,94,70),
+            icon: Icon(Icons.add,color: Colors.white,),
+             ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
+            ),
+            
+              child: Positioned(
+                top: -3,
+                bottom: -9, 
+                left: 0,
+                right: 0,
+                 
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(55),
+                    child: Image(image: AssetImage(item[index].imagePath),fit: BoxFit.cover,)),
+                ),
+                
+              ),
+              ],
+           
+          ),
+        );
+      },
       
+        
+      ),
     ),
   ),
  drawer: Drawer(
