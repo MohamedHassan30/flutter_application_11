@@ -20,6 +20,35 @@ class _HomeScreenState extends State<HomeScreen> {
       imagePath: '',
       Price: 13.99
     ),
+    Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+Item(
+      imagePath: '',
+      Price: 13.99
+    ),
+
 
   ];
   @override
