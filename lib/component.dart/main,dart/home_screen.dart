@@ -63,7 +63,7 @@ return Scaffold(
       mainAxisSpacing: 33,
     ),
     itemCount: item.length,
-    itemBuilder: (context, index) {
+    itemBuilder: (context, index) { 
       
       return GestureDetector(
         onTap:(){
