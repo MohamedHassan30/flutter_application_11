@@ -12,7 +12,7 @@ final Item product;
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
 }
-
+  
 class _DetailsScreenState extends State<DetailsScreen> {
   @override
   Widget build(BuildContext context) {
