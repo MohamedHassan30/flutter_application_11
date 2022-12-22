@@ -16,7 +16,10 @@ class Item{
 }
 class _HomeScreenState extends State<HomeScreen> {
   List<Item> item=[
-    Item(),
+    Item(
+      imagePath: '',
+      Price: 13.99
+    ),
 
   ];
   @override
