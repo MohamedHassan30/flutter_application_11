@@ -44,8 +44,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
     subtitle: Text("Test"),
     title: Text("Test"),
     leading: CircleAvatar(
-      radius: 20,
-      child: Image(image: AssetImage("images/37.jpg")),
+      backgroundImage: AssetImage("images/37.jpg"),
+     
       
     ),
     trailing:IconButton(onPressed: () {
