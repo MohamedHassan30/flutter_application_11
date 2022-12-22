@@ -21,31 +21,31 @@ class _HomeScreenState extends State<HomeScreen> {
       Price: 13.99
     ),
     Item(
-      imagePath: '', 
+      imagePath: 'image/38.jpg', 
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/39.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/40.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/41.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/42.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/43.jpg',
       Price: 13.99
     ),
 Item(
-      imagePath: '',
+      imagePath: 'image/44.jpg',
       Price: 13.99
     ),
 
