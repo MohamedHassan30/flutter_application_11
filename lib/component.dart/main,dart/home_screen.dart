@@ -83,7 +83,7 @@ return Scaffold(
               
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(55),
-                  child: Image(image: AssetImage("images/37.jpg"),fit: BoxFit.cover,)),
+                  child: Image(image: AssetImage(item[index].imagePath),fit: BoxFit.cover,)),
               ),
               
             ),
