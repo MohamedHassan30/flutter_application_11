@@ -3,9 +3,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/component.dart/main,dart/home_screen.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({super.key});
+  const DetailsScreen({super.key , required this.product});
+final Item product;
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
