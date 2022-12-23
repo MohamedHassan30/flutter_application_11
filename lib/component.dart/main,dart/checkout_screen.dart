@@ -70,7 +70,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               physics: BouncingScrollPhysics(),
               scrollDirection: Axis.vertical,
               shrinkWrap: true, 
-              itemBuilder: ((context, index) {  
+              itemBuilder: ((context, index) {   
               
                  return Container(
                   height: 50, 
