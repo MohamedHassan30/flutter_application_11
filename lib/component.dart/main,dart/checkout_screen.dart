@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter_application_1/provider/cart.dart';
+import 'package:provider/provider.dart';
 
 class CheckoutScreen extends StatefulWidget {
   const CheckoutScreen({super.key});
@@ -10,129 +12,85 @@ class CheckoutScreen extends StatefulWidget {
 }
 
 class _CheckoutScreenState extends State<CheckoutScreen> {
+  
   @override
   Widget build(BuildContext context) {  
     return Scaffold(
-      appBar: AppBar(
+    appBar: AppBar(
     backgroundColor: Colors.green,
-    title: Text(" CheckoutScrren",style: TextStyle(color: Colors.black,fontSize: 15),),
+    title: 
+         Text("Details",style: TextStyle(color: Colors.black,fontSize: 15),),   
+      
     actions: [
-      Row(children: [
-        Stack(
-          children: [
-            Container(
-              height: 20,
-              width: 20,
-              child: Text("8",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),
-              padding: EdgeInsets.only(left: 5),
-              decoration: BoxDecoration(
-              
-                color: Color.fromARGB(211, 164, 255, 193),
-               shape:BoxShape.circle ),
-            ),
-          IconButton(onPressed: (){
-            
-          }, icon: Icon(Icons.add_shopping_cart)),
-        ]),
-        Padding(
-          padding: const EdgeInsets.only(right: 11),
-          child: Text("\$ 13",style: TextStyle(fontSize: 18),),
-        )
-      ],),
-    ],),
-   body: Column(
-     children: [
-       ListTile(
-        subtitle: Text("Test"),
-        title: Text("Test"),
-        leading: CircleAvatar(
-          backgroundImage: AssetImage("images/37.jpg"),
-         
-          
-        ),
-        trailing:IconButton(onPressed: () {
-            
-          },
-          icon: Icon(Icons.remove), 
-          ),
+      
+       Consumer<Cart>(
+        builder: ((context, value, child) {
+         return Row(children: [
+            Stack(
+              children: [ 
+                Container(
+                  height: 20,
+                  width: 20,
+                  child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),  
+                  padding: EdgeInsets.only(left: 5),
+                  decoration: BoxDecoration(
+                  
+                    color: Color.fromARGB(211, 164, 255, 193),
+                   shape:BoxShape.circle ),
+                ),
+              IconButton(onPressed: (){
+                                Navigator.push(context, MaterialPageRoute(builder: ((context) => CheckoutScreen())));
+
+              }, icon: Icon(Icons.add_shopping_cart)),
+            ]),
+             
+            Padding(
+              padding: const EdgeInsets.only(right: 11),
+              child: Text("\$ ${value.price}",style: TextStyle(fontSize: 18),),
+            )
+          ],);
+        }),
+        
+
        ),
-       ListTile(
-    subtitle: Text("Test"),
-    title: Text("Test"),
-    leading: CircleAvatar(
-      backgroundImage: AssetImage("images/37.jpg"),
-     
-      
-    ),
-    trailing:IconButton(onPressed: () {
         
-      },
-      icon: Icon(Icons.remove), 
-      ),
-   ), 
-
-ListTile(
-    subtitle: Text("Test"),
-    title: Text("Test"),
-    leading: CircleAvatar(
-      backgroundImage: AssetImage("images/37.jpg"),
-     
-      
-    ),
-    trailing:IconButton(onPressed: () {
+    ],),
+    
+  
+   body: Consumer<Cart>(
+    builder: ((context, value, child) {
+      return  Column(
+       children: [
+        ListView.separated(
+          itemBuilder: ((context, index) {
+          return ListTile(
+          subtitle: Text("Test"),
+          title: Text("Test"),
+          leading: CircleAvatar(
+            backgroundImage: AssetImage('${value.SelectedProducts[index].imagePath}')
+           
+            
+          ),
+          trailing:IconButton(onPressed: () {
+              
+            },
+            icon: Icon(Icons.remove), 
+            ),
+         );
+        }), separatorBuilder: ((context, index) {
+          return SizedBox(
+            height: 5,
+          );
+        }), itemCount: value.SelectedProducts.length,
+        )
         
-      },
-      icon: Icon(Icons.remove), 
-      ),
-   ), 
-
-ListTile(
-    subtitle: Text("Test"),
-    title: Text("Test"),
-    leading: CircleAvatar(
-      backgroundImage: AssetImage("images/37.jpg"),
+   
+       ],
+     );
+    }),
      
-      
-    ),
-    trailing:IconButton(onPressed: () {
-        
-      },
-      icon: Icon(Icons.remove), 
-      ),
-   ), 
-
-ListTile(
-    subtitle: Text("Test"),
-    title: Text("Test"),
-    leading: CircleAvatar(
-      backgroundImage: AssetImage("images/37.jpg"),
-     
-      
-    ),
-    trailing:IconButton(onPressed: () {
-        
-      },
-      icon: Icon(Icons.remove), 
-      ),
-   ), 
-
-ListTile(
-    subtitle: Text("Test"),
-    title: Text("Test"),
-    leading: CircleAvatar(
-      backgroundImage: AssetImage("images/37.jpg"),
-     
-      
-    ),
-    trailing:IconButton(onPressed: () {
-        
-      },
-      icon: Icon(Icons.remove), 
-      ),
-   ), 
 
 
-     ],
    ), 
 
 
