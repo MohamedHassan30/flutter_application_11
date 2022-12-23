@@ -24,8 +24,8 @@ class _HomeScreenState extends State<HomeScreen> {
       imagePath: 'images/38.jpg', 
       Price: 10.99
     ),
-Item( 
-      imagePath: 'images/39.jpg',
+Item(  
+      imagePath: 'images/39.jpg', 
       Price: 19.99
     ),
 Item(
