@@ -142,7 +142,7 @@ return Scaffold(
         Consumer<Cart>(
           builder:(context, value, child) {
             return Stack(
-          children: [
+          children: [ 
             Container(
               height: 20,
               width: 20,
