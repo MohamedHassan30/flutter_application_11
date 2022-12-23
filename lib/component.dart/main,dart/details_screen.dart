@@ -24,7 +24,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
  appBar: AppBar(
     backgroundColor: Colors.green,
     title: 
-         Text("Details",style: TextStyle(color: Colors.black,fontSize: 15),),  
+         Text("Details",style: TextStyle(color: Colors.black,fontSize: 15),),   
       
     actions: [
       
