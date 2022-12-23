@@ -92,8 +92,8 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                 );
                 
             }), separatorBuilder: ((context, index) {
-              return SizedBox( 
-                height: 20,
+              return SizedBox(  
+                height: 20, 
               );
             }), itemCount:value.SelectedProducts.length ,
             );
