@@ -91,7 +91,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                          ),
                 );
                 
-            }), separatorBuilder: ((context, index) {
+            }), separatorBuilder: ((context, index) { 
               return SizedBox(  
                 height: 20, 
               );
