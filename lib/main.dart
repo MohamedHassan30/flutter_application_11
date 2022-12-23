@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
       create:(context){return Cart();}, 
-      child: MaterialApp(
+      child: MaterialApp( 
         title: 'Flutter Demo', 
         theme: ThemeData(
           // This is the theme of your application.
