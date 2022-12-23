@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/component.dart/main,dart/home_screen.dart';
 
 class DetailsScreen extends StatefulWidget {
-  const DetailsScreen({super.key , required this.product});
-final Item product;
+   DetailsScreen({super.key , required this.product});
+ Item product;
 
   @override
   State<DetailsScreen> createState() => _DetailsScreenState();
@@ -48,11 +48,11 @@ class _DetailsScreenState extends State<DetailsScreen> {
     
    body: Column(children: [
     Container(
-      child: Image(image: AssetImage("images/37.jpg")),
+      child: Image(image: AssetImage(widget.product.imagePath), height: 200, width: double.infinity,fit: BoxFit.cover,),
       
     ),
     SizedBox(height: 7,),
-     Text('\$ 13.99'), 
+     Text('\$ ${widget.product.Price}'), 
      Padding(
        padding: const EdgeInsets.all(10.0),
        child: Row(
