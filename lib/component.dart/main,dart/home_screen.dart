@@ -74,7 +74,7 @@ return Scaffold(
     
         } ,
         child: Stack(children: [GridTile(
-           footer: GridTileBar(trailing: Consumer<Cart>( 
+           footer: GridTileBar(trailing: Consumer<Cart>(  
             builder: (context, tastt, child){
               return  IconButton(onPressed: () { 
                 tastt.add(item[index]);
