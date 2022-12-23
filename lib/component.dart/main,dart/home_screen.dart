@@ -74,10 +74,16 @@ return Scaffold(
     
         } ,
         child: Stack(children: [GridTile(
-          footer: GridTileBar(trailing: IconButton(onPressed: () { },
-          color: Color.fromARGB(255,62,94,70),
-          icon: Icon(Icons.add,color: Colors.white,),
-           ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
+          footer: GridTileBar(trailing: Consumer<Cart>(
+            builder: (context, tastt, child){
+              return  IconButton(onPressed: () { 
+                tastt.add(item[index]);
+              },
+            color: Color.fromARGB(255,62,94,70),
+            icon: Icon(Icons.add,color: Colors.white,));
+            },
+          
+          ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
           ),
           
             child: Positioned(
@@ -129,7 +135,7 @@ return Scaffold(
     backgroundColor: Colors.green,
     title: Consumer<Cart>(
       builder: ((context, testt, child ){
-        return Text("${testt.MyName}",style: TextStyle(color: Colors.black,fontSize: 15),);  
+        return Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),);  
       })),
     actions: [
       Row(children: [
