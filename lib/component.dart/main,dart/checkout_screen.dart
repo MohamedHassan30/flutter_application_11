@@ -86,7 +86,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   trailing:IconButton(onPressed: () {
                       
                     },
-                    icon: Icon(Icons.remove),   
+                    icon: Icon(Icons.remove),    
                     ),
                          ),
                 );
