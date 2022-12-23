@@ -129,7 +129,7 @@ return Scaffold(
     backgroundColor: Colors.green,
     title: Consumer<Cart>(
       builder: ((context, testt, child ){
-        return Text("${testt.MyName}",style: TextStyle(color: Colors.black,fontSize: 15),); 
+        return Text("${testt.MyName}",style: TextStyle(color: Colors.black,fontSize: 15),);  
       })),
     actions: [
       Row(children: [
