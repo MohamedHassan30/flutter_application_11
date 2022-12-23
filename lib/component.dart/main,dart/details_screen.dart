@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/component.dart/main,dart/home_screen.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/cart.dart';
 
 class DetailsScreen extends StatefulWidget {
    DetailsScreen({super.key , required this.product});
@@ -18,32 +21,43 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       
-  appBar: AppBar(
+ appBar: AppBar(
     backgroundColor: Colors.green,
-    title: Text("Details Screen",style: TextStyle(color: Colors.black,fontSize: 15),),
+    title: 
+         Text("Details",style: TextStyle(color: Colors.black,fontSize: 15),),
+      
     actions: [
-      Row(children: [
-        Stack(
-          children: [
-            Container(
-              height: 20,
-              width: 20,
-              child: Text("8",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),
-              padding: EdgeInsets.only(left: 5),
-              decoration: BoxDecoration(
-              
-                color: Color.fromARGB(211, 164, 255, 193),
-               shape:BoxShape.circle ),
-            ),
-          IconButton(onPressed: (){
-            
-          }, icon: Icon(Icons.add_shopping_cart)),
-        ]),
-        Padding(
-          padding: const EdgeInsets.only(right: 11),
-          child: Text("\$ 13",style: TextStyle(fontSize: 18),),
-        )
-      ],),
+      
+       Consumer<Cart>(
+        builder: ((context, value, child) {
+         return Row(children: [
+            Stack(
+              children: [ 
+                Container(
+                  height: 20,
+                  width: 20,
+                  child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),  
+                  padding: EdgeInsets.only(left: 5),
+                  decoration: BoxDecoration(
+                  
+                    color: Color.fromARGB(211, 164, 255, 193),
+                   shape:BoxShape.circle ),
+                ),
+              IconButton(onPressed: (){
+                
+              }, icon: Icon(Icons.add_shopping_cart)),
+            ]),
+             
+            Padding(
+              padding: const EdgeInsets.only(right: 11),
+              child: Text("\$ ${value.price}",style: TextStyle(fontSize: 18),),
+            )
+          ],);
+        }),
+        
+
+       ),
+        
     ],),
     
    body: Column(children: [

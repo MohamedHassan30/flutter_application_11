@@ -56,6 +56,7 @@ Item(
   ];
   @override
   Widget build(BuildContext context) {
+      //final value = Provider.of<Cart>(context);
 return Scaffold(
   body: Padding(
     padding: const EdgeInsets.only(top: 10),
@@ -74,16 +75,19 @@ return Scaffold(
     
         } ,
         child: Stack(children: [GridTile(
-           footer: GridTileBar(trailing:  Consumer<Cart>(   
-            builder: (context, tastt, child){
-              return  IconButton(onPressed: () { 
-                tastt.add(item[index]);
-              },
-            color: Color.fromARGB(255,62,94,70),
-            icon: Icon(Icons.add,color: Colors.white,));
-            },
-          
-          ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
+           footer: GridTileBar(trailing:  
+                Consumer<Cart>(
+                  builder: ((context, value, child) {
+                    
+                    return IconButton(onPressed: () { 
+                  value.add(item[index]);
+                              },
+                            color: Color.fromARGB(255,62,94,70),
+                            icon: Icon(Icons.add,color: Colors.white,));
+                  }),
+                
+                ),
+            leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
           ),
           
             child: Positioned(
@@ -133,38 +137,41 @@ return Scaffold(
  ),
   appBar: AppBar(
     backgroundColor: Colors.green,
-    title: Consumer<Cart>(
-      builder: ((context, testt, child ){
-        return Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),);  
-      })),
+    title: 
+         Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
+      
     actions: [
-      Row(children: [
-        Consumer<Cart>(
-          builder:(context, value, child) {
-            return Stack(
-          children: [ 
-            Container(
-              height: 20,
-              width: 20,
-              child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),  
-              padding: EdgeInsets.only(left: 5),
-              decoration: BoxDecoration(
-              
-                color: Color.fromARGB(211, 164, 255, 193),
-               shape:BoxShape.circle ),
-            ),
-          IconButton(onPressed: (){
-            
-          }, icon: Icon(Icons.add_shopping_cart)),
-        ]);
-          },
+      
+       Consumer<Cart>(
+        builder: ((context, value, child) {
+         return Row(children: [
+            Stack(
+              children: [ 
+                Container(
+                  height: 20,
+                  width: 20,
+                  child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),  
+                  padding: EdgeInsets.only(left: 5),
+                  decoration: BoxDecoration(
+                  
+                    color: Color.fromARGB(211, 164, 255, 193),
+                   shape:BoxShape.circle ),
+                ),
+              IconButton(onPressed: (){
+                
+              }, icon: Icon(Icons.add_shopping_cart)),
+            ]),
+             
+            Padding(
+              padding: const EdgeInsets.only(right: 11),
+              child: Text("\$ ${value.price}",style: TextStyle(fontSize: 18),),
+            )
+          ],);
+        }),
         
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 11),
-          child: Text("\$ 13",style: TextStyle(fontSize: 18),),
-        )
-      ],),
+
+       ),
+        
     ],),
     
 );
