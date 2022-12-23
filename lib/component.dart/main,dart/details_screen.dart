@@ -22,7 +22,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       
- appBar: AppBar(
+ appBar: AppBar( 
     backgroundColor: Colors.green,
     title: 
          Text("Details",style: TextStyle(color: Colors.black,fontSize: 15),),   
