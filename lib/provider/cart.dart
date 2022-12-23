@@ -10,7 +10,7 @@ class Cart with ChangeNotifier{
   add( Item Product){
     SelectedProducts.add(Product); 
 
-    price += Product.Price.round();  
+    price += Product.Price.round();   
     notifyListeners();   
   }
 } 
