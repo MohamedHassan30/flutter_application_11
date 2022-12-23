@@ -6,5 +6,6 @@ class Cart with ChangeNotifier{
   ];
   add(Product){
     SelectedProducts.add(Product); 
+    notifyListeners();
   }
 } 

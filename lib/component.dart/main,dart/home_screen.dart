@@ -74,7 +74,7 @@ return Scaffold(
     
         } ,
         child: Stack(children: [GridTile(
-           footer: GridTileBar(trailing:  Consumer<Cart>(  
+           footer: GridTileBar(trailing:  Consumer<Cart>(   
             builder: (context, tastt, child){
               return  IconButton(onPressed: () { 
                 tastt.add(item[index]);
@@ -139,12 +139,14 @@ return Scaffold(
       })),
     actions: [
       Row(children: [
-        Stack(
+        Consumer<Cart>(
+          builder:(context, value, child) {
+            return Stack(
           children: [
             Container(
               height: 20,
               width: 20,
-              child: Text("8",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),
+              child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),
               padding: EdgeInsets.only(left: 5),
               decoration: BoxDecoration(
               
@@ -154,7 +156,10 @@ return Scaffold(
           IconButton(onPressed: (){
             
           }, icon: Icon(Icons.add_shopping_cart)),
-        ]),
+        ]);
+          },
+        
+        ),
         Padding(
           padding: const EdgeInsets.only(right: 11),
           child: Text("\$ 13",style: TextStyle(fontSize: 18),),
