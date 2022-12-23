@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/component.dart/main,dart/details_screen.dart';
+import 'package:provider/provider.dart';
+
+import '../../provider/cart.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -124,7 +127,10 @@ return Scaffold(
  ),
   appBar: AppBar(
     backgroundColor: Colors.green,
-    title: Text("Home",style: TextStyle(color: Colors.black,fontSize: 15),),
+    title: Consumer<Cart>(
+      builder: ((context, testt, child ){
+        return Text("${testt.MyName}",style: TextStyle(color: Colors.black,fontSize: 15),);
+      })),
     actions: [
       Row(children: [
         Stack(
