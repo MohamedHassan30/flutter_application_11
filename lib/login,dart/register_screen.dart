@@ -17,40 +17,42 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body:Padding(
         padding: EdgeInsets.all(10),
-      child: Column(
-        children: [
-          SizedBox(height: 200,),
-          MyTextField(hintText: 'Enter your Username', textInputType: TextInputType.name, obscureText: false),
-          SizedBox(
-            height: 20,
-          ),
-          MyTextField(hintText: 'Enter your Email', textInputType: TextInputType.emailAddress, obscureText: false
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          MyTextField(hintText: 'Enter your Password', textInputType:TextInputType.visiblePassword, obscureText: true),
-          SizedBox(
-            height: 50,
-          ),
-          ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
-          }, child:  Text('Sign up',style: TextStyle(
-            fontSize: 15
-          ),
-          
-          ),
-          style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(Colors.green),
-            padding: MaterialStateProperty.all(EdgeInsets.all(10)),
-            shape: MaterialStateProperty.all(RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(height: 200,),
+            MyTextField(hintText: 'Enter your Username', textInputType: TextInputType.name, obscureText: false),
+            SizedBox(
+              height: 20,
             ),
-          
+            MyTextField(hintText: 'Enter your Email', textInputType: TextInputType.emailAddress, obscureText: false
             ),
-          ),
-          ),
-        ],
+            SizedBox(
+              height: 20,
+            ),
+            MyTextField(hintText: 'Enter your Password', textInputType:TextInputType.visiblePassword, obscureText: true),
+            SizedBox(
+              height: 50,
+            ),
+            ElevatedButton(onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginScreen()));
+            }, child:  Text('Sign up',style: TextStyle(
+              fontSize: 15
+            ),
+            
+            ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.green),
+              padding: MaterialStateProperty.all(EdgeInsets.all(10)),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            
+              ),
+            ),
+            ),
+          ],
+        ),
       ),
       ),
     );
