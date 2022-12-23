@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/component.dart/main,dart/checkout_screen.dart';
 import 'package:flutter_application_1/component.dart/main,dart/details_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +19,7 @@ class Item{
   Item({required this.imagePath , required this.Price});    
 }
 class _HomeScreenState extends State<HomeScreen> {
-  List<Item> item=[
+  List<Item> item=[ 
     Item(
       imagePath: 'images/37.jpg',
       Price: 17.99
@@ -158,7 +159,7 @@ return Scaffold(
                    shape:BoxShape.circle ),
                 ),
               IconButton(onPressed: (){
-                
+                Navigator.push(context, MaterialPageRoute(builder: ((context) => CheckoutScreen())));
               }, icon: Icon(Icons.add_shopping_cart)),
             ]),
              
