@@ -68,7 +68,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
             builder: (context, value, child) { 
              return ListView.separated(
               physics: BouncingScrollPhysics(),  
-              scrollDirection: Axis.vertical,
+              scrollDirection: Axis.vertical, 
               shrinkWrap: true, 
               itemBuilder: ((context, index) {   
               
