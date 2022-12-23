@@ -65,7 +65,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
         child: Column(
          children: [
           Consumer<Cart>(
-            builder: (context, value, child) {
+            builder: (context, value, child) { 
              return ListView.separated(
               physics: BouncingScrollPhysics(),
               scrollDirection: Axis.vertical,
