@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
       imagePath: 'images/38.jpg', 
       Price: 10.99
     ),
-Item(
+Item( 
       imagePath: 'images/39.jpg',
       Price: 19.99
     ),
@@ -56,48 +56,45 @@ Item(
 return Scaffold(
   body: Padding(
     padding: const EdgeInsets.only(top: 10),
-    child: SingleChildScrollView(
-      child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        childAspectRatio: 3/2,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 33,
-      ),
-      itemCount: item.length,
-      itemBuilder: (context, index) { 
-        
-        return GestureDetector(
-          onTap:(){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(product: item[index],),),); 
-    
-          } ,
-          child: Stack(children: [GridTile(
-            footer: GridTileBar(trailing: IconButton(onPressed: () { },
-            color: Color.fromARGB(255,62,94,70),
-            icon: Icon(Icons.add,color: Colors.white,),
-             ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
-            ),
-            
-              child: Positioned(
-                top: -3,
-                bottom: -9, 
-                left: 0,
-                right: 0,
-                 
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(55),
-                    child: Image(image: AssetImage(item[index].imagePath),fit: BoxFit.cover,)),
-                ),
-                
-              ),
-              ],
-           
-          ),
-        );
-      },
+    child: GridView.builder(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+      crossAxisCount: 2,
+      childAspectRatio: 3/2,
+      crossAxisSpacing: 10,
+      mainAxisSpacing: 33,
+    ),
+    itemCount: item.length,
+    itemBuilder: (context, index) { 
       
-        
-      ),
+      return GestureDetector(
+        onTap:(){
+        Navigator.push(context, MaterialPageRoute(builder: (context)=>DetailsScreen(product: item[index],),),); 
+    
+        } ,
+        child: Stack(children: [GridTile(
+          footer: GridTileBar(trailing: IconButton(onPressed: () { },
+          color: Color.fromARGB(255,62,94,70),
+          icon: Icon(Icons.add,color: Colors.white,),
+           ),leading: Text("\$ ${item[index].Price}",style: TextStyle(color: Colors.white),),  
+          ),
+          
+            child: Positioned(
+              top: 1,
+              bottom: 1,
+              right: 0,
+              left: 0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image(image: AssetImage(item[index].imagePath),),  ),
+            ),
+              
+            ),
+            ],
+         
+        ),
+      );
+    },
+    
+      
     ),
   ),
  drawer: Drawer(
