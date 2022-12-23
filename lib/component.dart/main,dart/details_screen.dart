@@ -102,7 +102,7 @@ Row(
      Padding(
        padding: const EdgeInsets.all(10),   
        child: Align(
-  alignment: Alignment.topLeft,
+  alignment: Alignment.topLeft, 
         child: Text('Details :')),
      ),
      Padding(
