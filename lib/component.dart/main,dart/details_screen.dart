@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/component.dart/main,dart/checkout_screen.dart';
 import 'package:flutter_application_1/component.dart/main,dart/home_screen.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +45,8 @@ class _DetailsScreenState extends State<DetailsScreen> {
                    shape:BoxShape.circle ),
                 ),
               IconButton(onPressed: (){
-                
+                                Navigator.push(context, MaterialPageRoute(builder: ((context) => CheckoutScreen())));
+
               }, icon: Icon(Icons.add_shopping_cart)),
             ]),
              
@@ -109,4 +111,4 @@ Row(
      )
    ],),
     );
-  }}
+  }} 
