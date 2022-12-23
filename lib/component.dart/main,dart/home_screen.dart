@@ -146,7 +146,7 @@ return Scaffold(
             Container(
               height: 20,
               width: 20,
-              child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),), 
+              child: Text("${value.SelectedProducts.length}",style: TextStyle(fontSize: 16,color: Color.fromARGB(225, 0, 0, 0)),),  
               padding: EdgeInsets.only(left: 5),
               decoration: BoxDecoration(
               
