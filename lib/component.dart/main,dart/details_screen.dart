@@ -75,7 +75,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
 
          children: [
            Container(
-            decoration: BoxDecoration(
+            decoration: BoxDecoration( 
               
               borderRadius: BorderRadius.circular(4),
               color: Colors.red,
