@@ -18,7 +18,7 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Padding(
         padding: EdgeInsets.all(10),
-        child :SingleChildScrollView(
+        child :SingleChildScrollView( 
           child: Column(children: [
           SizedBox(height: 200,),
           MyTextField(hintText: "Enter Your Email", textInputType: TextInputType.emailAddress, obscureText: false),
