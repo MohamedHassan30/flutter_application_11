@@ -55,7 +55,7 @@ Item(
 
   ];
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) { 
       //final value = Provider.of<Cart>(context);
 return Scaffold(
   body: Padding(
