@@ -93,7 +93,7 @@ SizedBox(
 Row(
   children: [
     Icon(Icons.edit_location), 
-    Text('Flower Shop') ,
+    Text('Flower Shop') , 
   ],
 ),
          ],
