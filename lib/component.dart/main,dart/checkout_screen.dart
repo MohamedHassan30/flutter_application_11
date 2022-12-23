@@ -80,7 +80,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                   title: Text("${value.SelectedProducts[index].Price}"),
                   leading: CircleAvatar(
                     backgroundImage: AssetImage('${value.SelectedProducts[index].imagePath}')
-                    
+                     
                     
                   ),
                   trailing:IconButton(onPressed: () {
