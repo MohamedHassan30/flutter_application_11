@@ -73,7 +73,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               itemBuilder: ((context, index) {
               
                  return Container(
-                  height: 50,
+                  height: 50, 
                   width: double.infinity,
                   child: ListTile(
                   subtitle: Text("${value.SelectedProducts[index].Price}"),
