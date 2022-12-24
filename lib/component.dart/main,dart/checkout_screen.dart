@@ -102,7 +102,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
           ),
           
    ElevatedButton(onPressed: (){ 
-            }, child:  Text('Pay',style: TextStyle(  
+            }, child:  Text('Pay',style: TextStyle(   
               fontSize: 15,
             ))),
          ]
