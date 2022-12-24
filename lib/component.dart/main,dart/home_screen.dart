@@ -13,7 +13,7 @@ class HomeScreen extends StatefulWidget {
   @override
   State<HomeScreen> createState() => _HomeScreenState();
 }
-class Item{
+class Item{ 
   String imagePath;
   double Price;
   Item({required this.imagePath , required this.Price});    
